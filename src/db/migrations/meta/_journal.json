@@ -8,6 +8,13 @@
       "when": 1752020291589,
       "tag": "0000_mature_warpath",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752094634169,
+      "tag": "0001_cold_hellion",
+      "breakpoints": true
     }
   ]
 }
