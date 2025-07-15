@@ -1,20 +1,31 @@
-# NLW Agents
+# NLW Agents — Audio Q&A Application
 
-NLW Agents is a backend project developed during a Rocketseat event. It provides a Fastify-based API with TypeScript, using Drizzle ORM for database access and Zod for schema validation.
+NLW Agents is an innovative Q&A backend application that allows users to send audio messages, which are automatically transcribed, stored in a vector database, and later used to generate answers for user questions. This enables users to build a knowledge base from their own voice notes and retrieve information through natural language queries.
+
+## What Does the Application Do?
+
+- **Audio Upload & Transcription:** Users can upload audio files. The application transcribes the audio into text using advanced speech-to-text technology.
+- **Vector Database Storage:** Transcriptions are embedded and stored in a vector database, enabling efficient semantic search and retrieval.
+- **Question Answering:** Users can ask questions at any time. The system searches the vector database for relevant information and generates answers using state-of-the-art language models.
+
+This workflow makes it easy to capture, organize, and query knowledge using just your voice.
 
 ## Tech Stack
 
 - **Node.js** + **TypeScript**
-- **Fastify** (API server)
-- **Drizzle ORM** (Database ORM)
-- **PostgreSQL** (Database)
-- **Zod** (Validation)
-- **Biome** (Code formatting/linting)
+- **Fastify** — API server
+- **Drizzle ORM** — Database ORM
+- **PostgreSQL** — Relational database
+- **Zod** — Schema validation
+- **Biome** — Code formatting/linting
+- **Vector Database** — For semantic search (e.g., Pinecone, Qdrant, or similar)
+- **Speech-to-Text Service** — For audio transcription (e.g., Google Speech-to-Text, Whisper, or Gemini)
+- **LLM Integration** — For answer generation (e.g., Gemini, OpenAI GPT)
 
 ## Project Structure
 
 - `src/server.ts` — Main server entry point
-- `src/http/routes/` — API route handlers
+- `src/http/routes/` — API route handlers (audio upload, question creation, etc.)
 - `src/db/schema/` — Database schema definitions
 - `src/db/migrations/` — Database migrations
 - `src/db/seed.ts` — Database seeding script
@@ -28,7 +39,7 @@ NLW Agents is a backend project developed during a Rocketseat event. It provides
    npm install
    ```
 3. **Configure environment variables:**
-   - Copy `.env.example` to `.env` and fill in the required values (e.g., `PORT`, `DATABASE_URL`).
+   - Copy `.env.example` to `.env` and fill in the required values (e.g., `PORT`, `DATABASE_URL`, vector DB/API keys, transcription/LLM API keys).
 4. **Run database migrations:**
    ```bash
    npx drizzle-kit migrate:push
@@ -50,7 +61,8 @@ NLW Agents is a backend project developed during a Rocketseat event. It provides
 
 ## Configuration
 
-- **Database:** Configure the `DATABASE_URL` in your `.env` file for PostgreSQL connection.
+- **Database:** Set `DATABASE_URL` in your `.env` file for PostgreSQL connection.
+- **Vector DB & APIs:** Provide credentials for your vector database and any external APIs (speech-to-text, LLM) in `.env`.
 - **Port:** Set the `PORT` variable in `.env` to specify the server port.
 
 ---
