@@ -41,6 +41,5 @@ POST {{baseUrl}}/rooms/{{roomId}}/questions
 Content-Type: application/json
 
 {
-    "question": "Pergunta de teste?",
-    "description": "Esta é uma sala de teste"
+    "question": "O que é Batatel?"
 }

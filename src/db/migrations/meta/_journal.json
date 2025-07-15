@@ -15,6 +15,13 @@
       "when": 1752094634169,
       "tag": "0001_cold_hellion",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752437865950,
+      "tag": "0002_curly_scorpion",
+      "breakpoints": true
     }
   ]
 }
