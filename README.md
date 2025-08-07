@@ -1,4 +1,4 @@
-# NLW Agents — Audio Q&A Application
+# NLW Agents — AI-powered Audio Q&A Application
 
 NLW Agents is an innovative Q&A backend application that allows users to send audio messages, which are automatically transcribed, stored in a vector database, and later used to generate answers for user questions. This enables users to build a knowledge base from their own voice notes and retrieve information through natural language queries.
 
@@ -18,9 +18,9 @@ This workflow makes it easy to capture, organize, and query knowledge using just
 - **PostgreSQL** — Relational database
 - **Zod** — Schema validation
 - **Biome** — Code formatting/linting
-- **Vector Database** — For semantic search (e.g., Pinecone, Qdrant, or similar)
-- **Speech-to-Text Service** — For audio transcription (e.g., Google Speech-to-Text, Whisper, or Gemini)
-- **LLM Integration** — For answer generation (e.g., Gemini, OpenAI GPT)
+- **Vector Database** — For semantic search (PostgreSQL)
+- **Speech-to-Text Service** — For audio transcription (Gemini)
+- **LLM Integration** — For answer generation (Gemini)
 
 ## Project Structure
 
@@ -66,6 +66,10 @@ This workflow makes it easy to capture, organize, and query knowledge using just
 - **Database:** Set `DATABASE_URL` in your `.env` file for PostgreSQL connection.
 - **Vector DB & APIs:** Provide credentials for your vector database and any external APIs (speech-to-text, LLM) in `.env`.
 - **Port:** Set the `PORT` variable in `.env` to specify the server port.
+
+## Front end
+
+- [allan-alb/nlwagents-web](https://github.com/allan-alb/nlwagents-web)
 
 ---
 
