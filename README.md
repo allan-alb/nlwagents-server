@@ -33,6 +33,8 @@ This workflow makes it easy to capture, organize, and query knowledge using just
 
 ## Setup Instructions
 
+> **Note**: Make sure you have **Node.js v22.16.0 or higher** installed.
+
 1. **Clone the repository**
 2. **Install dependencies:**
    ```bash
